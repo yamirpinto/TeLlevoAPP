@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Solicitar Viaje</ion-title>
+    <ion-button routerLink="/viajes" routerDirection="forward" fill="clear">
+      <ion-icon name="car-outline"></ion-icon>
+      <ion-label>Viajes</ion-label>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+  <ion-list>
+    <ion-item *ngFor="let viaje of viajesDisponibles">
+      <ion-label>{{ viaje.nombre }}</ion-label>
+      <ion-label>Cantidad de asientos disponibles : {{  viaje.cantidadAsientos }}</ion-label>
+      <ion-button slot="end" (click)="solicitarViaje(viaje)">Solicitar</ion-button>
+    </ion-item>
+  </ion-list>
+  </div>
+
+</ion-content>

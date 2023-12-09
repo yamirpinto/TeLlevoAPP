@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ofrecer Viaje</ion-title>
+    <ion-button routerLink="/viajes" routerDirection="forward" fill="clear">
+      <ion-icon name="car-outline"></ion-icon>
+      <ion-label>Viajes</ion-label>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-img src="assets/icon/uber.png" alt="Logo Uber"></ion-img>
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-item>
+          <ion-label position="floating">Cantidad de Asientos Disponibles</ion-label>
+          <ion-input [(ngModel)]="cantidadAsientos" type="number" required></ion-input>
+        </ion-item>
+
+        <ion-button (click)="ofrecerViaje()" expand="full">Ofrecer Viaje</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
